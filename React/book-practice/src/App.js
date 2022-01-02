@@ -1,15 +1,17 @@
+import React from 'react';
+import { Route, Link } from "react-router-dom";
 import "./App.css";
-import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link,Redirect} from "react-router-dom";
-import Main from './inc/main.js';
-import one from './inc/1.js';
+import Main from "./pages/main";
+import One from "./pages/1";
 
-function App() {
-  const name = "서윤하";
-
-  return(
-    <div className="div_first">{name}</div> 
-  ) ;
-}
+const App = () => {
+  return (
+    <div>
+      <button><Link to="/1"></Link></button>
+      <Route path="/" component={Main} exact={true}/>
+      <Route path="/1" component={One} exact={true}/>
+    </div>
+  );
+};
 
 export default App;
