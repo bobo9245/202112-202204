@@ -10,12 +10,15 @@ const StyledText = styled.Text`
     font-size : 30px;
     margin-bottom : 10px;
 `
-
+const StyledButton = styled(Button)`
+    background-color : white;
+    color:blue;
+`
 const Main = ({navigation}) =>{
     return(
         <Container>
             <StyledText>Home</StyledText>
-            <Button title = "go to the list screen" onPress={()=>navigation.navigate('List')}/>
+            <StyledButton title = "go to the list screen" onPress={()=>navigation.navigate('List')}/>
         </Container>
     )
 }

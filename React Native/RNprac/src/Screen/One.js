@@ -12,12 +12,12 @@ const StyledText = styled.Text`
     margin-bottom : 10px;
 `;
 
-const One = () =>{
+const One = ({route}) =>{
     return(
         <Container>
             <StyledText>First Item.</StyledText>
-            <StyledText>ID : {route.params.id}</StyledText>
-            <StyledText>Name : {route.params.name}</StyledText>
+            <StyledText>ID :</StyledText>
+            <StyledText>Name :</StyledText>
         </Container>
     );
 };
